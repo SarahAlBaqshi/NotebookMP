@@ -2,6 +2,20 @@
 import styled from "styled-components";
 import { Link, NavLink } from "react-router-dom";
 
+export const CollectionItemImage = styled.img`
+  width: 30em;
+`;
+
+export const CreateButtonStyled = styled.button`
+  color: ${(props) => props.theme.backgroundColor};
+  background-color: ${(props) => props.theme.mainColor};
+
+  &:hover {
+    color: ${(props) => props.theme.mainColor};
+    background-color: ${(props) => props.theme.backgroundColor};
+  }
+`;
+
 export const ListWrapper = styled.div`
   justify-items: center;
   justify-content: center;
