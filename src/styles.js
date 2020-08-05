@@ -2,7 +2,6 @@
 import styled from "styled-components";
 import { Link, NavLink } from "react-router-dom";
 
-
 export const CollectionItemImage = styled.img`
   width: 30em;
 `;
@@ -39,12 +38,15 @@ export const NotebookWrapper = styled.div`
 `;
 
 export const Title = styled.h1`
-margin-top: 300px;
+  margin-top: 300px;
   text-align: center;
-  `;
+`;
 
+export const UpdateButtonStyled = styled.p`
+  color: ${(props) => props.theme.pink};
+`;
 
-  export const CollectionDetailWrapper = styled.div`
+export const CollectionDetailWrapper = styled.div`
   border: ;
   display: block;
   margin: 50px auto 30px;
@@ -90,7 +92,6 @@ export const DetailWrapper = styled.div`
     }
   }
 `;
-
 
 export const SearchBarStyled = styled.input`
   padding: 0.5rem;

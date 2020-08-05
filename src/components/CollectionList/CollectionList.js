@@ -25,7 +25,7 @@ const CollectionList = () => {
     ));
   return (
     <div>
-      <Title>Collections</Title>
+      <Title>Notebooks</Title>
       <SearchBar setQuery={setQuery} />
       {collectionList}
       <AddButton />

@@ -51,11 +51,11 @@ const NotebookModal = ({ collection, isOpen, closeModal, oldNotebook }) => {
       style={customStyles}
       contentLabel="Example Modal"
     >
-      <h3>New Notebook</h3>
+      <h3>New Note</h3>
       <form onSubmit={handleSubmit}>
         <div className="form-group row">
           <div className="col-6">
-            <label>Name</label>
+            <label>Note Name</label>
             <input
               required
               type="text"
