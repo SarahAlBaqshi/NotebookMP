@@ -1,7 +1,7 @@
 import React from "react";
 
 //Styles
-import { CollectionItemImage } from "./styles";
+import { CollectionItemImage } from "../../styles";
 import { Link } from "react-router-dom";
 
 const CollectionItem = ({ collection }) => {

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import NotebookItem from "./NotebookItem";
 
 //stores
-import notebookStore from "../../stores/NotebookStore";
+import notebookStore from "../../stores/notebookStore";
 
 //styles
 import { ListWrapper } from "../../styles";

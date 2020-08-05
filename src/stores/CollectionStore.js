@@ -3,7 +3,7 @@ import axios from "axios";
 
 class CollectionStore {
   collections = [];
-  loading = true;
+  // loading = true;
 
   fetchCollections = async () => {
     try {

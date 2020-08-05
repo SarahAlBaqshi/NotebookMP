@@ -2,6 +2,7 @@
 import styled from "styled-components";
 import { Link, NavLink } from "react-router-dom";
 
+
 export const CollectionItemImage = styled.img`
   width: 30em;
 `;
@@ -36,3 +37,8 @@ export const NotebookWrapper = styled.div`
     }
   }
 `;
+
+export const Title = styled.h1`
+margin-top: 300px;
+  text-align: center;
+  `;

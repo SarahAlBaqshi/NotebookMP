@@ -9,7 +9,8 @@ import { Title } from "../../styles";
 
 //Stores
 import collectionStore from "../../stores/collectionStore";
-import SearchBar from "../SearchBar";
+
+// import SearchBar from "../SearchBar";
 import AddButton from "../Buttons/AddButton";
 
 const CollectionList = () => {
@@ -25,7 +26,7 @@ const CollectionList = () => {
   return (
     <div>
       <Title>Collections</Title>
-      <SearchBar setQuery={setQuery} />
+      {/* <SearchBar setQuery={setQuery} /> */}
       {collectionList}
       <AddButton />
     </div>
