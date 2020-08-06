@@ -1,9 +1,16 @@
 //Styled Import
-import styled from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import { Link, NavLink } from "react-router-dom";
 
 export const CollectionItemImage = styled.img`
   width: 30em;
+`;
+
+export const CollectionWrapper = styled.div`
+  display: block;
+  justify-content: center;
+  flex: 1 1 150px;
+  margin: 10px 475px;
 `;
 
 export const CreateButtonStyled = styled.button`
@@ -16,6 +23,14 @@ export const CreateButtonStyled = styled.button`
   }
 `;
 
+export const GlobalStyle = createGlobalStyle`
+body{
+
+    align-items: center;
+    background-image: url(https://images.freeimages.com/images/large-previews/123/waves-on-the-roof-1562704.jpg);
+}
+`;
+
 export const ListWrapper = styled.div`
   justify-items: center;
   justify-content: center;
@@ -25,15 +40,8 @@ export const ListWrapper = styled.div`
 
 export const NotebookWrapper = styled.div`
   margin: 20px;
-  img {
-    width: 200px;
-    height: 200px;
-  }
   p {
     text-align: center;
-    &.perfume-price {
-      color: ${(props) => props.theme.pink};
-    }
   }
 `;
 

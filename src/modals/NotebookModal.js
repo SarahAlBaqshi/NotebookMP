@@ -79,23 +79,16 @@ const NotebookModal = ({ collection, isOpen, closeModal, oldNotebook }) => {
         </div>
         <div className="form-group">
           <label>Description</label>
-          <input
+          <textarea
+            class="form-control"
             name="description"
             type="text"
             onChange={handleChange}
             className="form-control"
             value={notebook.description}
-          />
+          ></textarea>
         </div>
-        {/* <div className="form-group">
-          <label>Image</label>
-          <input
-            name="image"
-            type="file"
-            onChange={handleImage}
-            className="form-control"
-          />
-        </div> */}
+
         <CreateButtonStyled className="btn float-right">
           {oldNotebook ? "Update" : "Create"}
         </CreateButtonStyled>

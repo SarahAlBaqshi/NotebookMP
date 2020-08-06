@@ -5,7 +5,7 @@ import { observer } from "mobx-react";
 import CollectionItem from "./CollectionItem";
 
 //styles
-import { Title } from "../../styles";
+import { Title, CollectionWrapper } from "../../styles";
 
 //Stores
 import collectionStore from "../../stores/collectionStore";
@@ -27,7 +27,7 @@ const CollectionList = () => {
     <div>
       <Title>Notebooks</Title>
       <SearchBar setQuery={setQuery} />
-      {collectionList}
+      <CollectionWrapper>{collectionList} </CollectionWrapper>
       <AddButton />
     </div>
   );

@@ -22,7 +22,6 @@ const BookDetail = () => {
   return (
     <DetailWrapper>
       <h1>{notebook.name}</h1>
-      <img src={notebook.image} alt={notebook.name} />
       <p>{notebook.description}</p>
       <UpdateButton notebook={notebook} />
     </DetailWrapper>
