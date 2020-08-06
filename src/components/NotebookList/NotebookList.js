@@ -1,18 +1,17 @@
 import React, { useState } from "react";
+import { observer } from "mobx-react";
 
 //components
 import NotebookItem from "./NotebookItem";
-
-//stores
-import notebookStore from "../../stores/notebookStore";
+import SearchBar from "../SearchBar"
 
 //styles
 import { ListWrapper } from "../../styles";
 
-const NotebookList = ({ notebook }) => {
+const NotebookList = ({ notebooks }) => {
   const [query, setQuery] = useState("");
 
-  const notebookList = notebookStore.notebooks
+  const notebookList = notebooks
     .filter((notebook) =>
       notebook.name.toLowerCase().includes(query.toLowerCase())
     )
@@ -20,10 +19,10 @@ const NotebookList = ({ notebook }) => {
 
   return (
     <div className="container">
-      {/* <SearchBar setQuery={setQuery} /> */}
+      <SearchBar setQuery={setQuery} />
       <ListWrapper>{notebookList}</ListWrapper>
     </div>
   );
 };
 
-export default NotebookList;
+export default observer(NotebookList);

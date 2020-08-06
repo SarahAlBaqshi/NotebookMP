@@ -9,6 +9,7 @@ class CollectionStore {
     try {
       const response = await axios.get("http://localhost:8000/collections");
       this.collections = response.data;
+      console.log("CollectionStore -> fetchCollections -> this.collections", this.collections)
       this.loading = false;
     } catch (error) {
       console.error("CollectionStore -> fetchCollection -> error", error);

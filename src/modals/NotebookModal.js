@@ -18,7 +18,7 @@ const customStyles = {
   },
 };
 
-const NotebookModal = ({ shop, isOpen, closeModal, oldNotebook }) => {
+const NotebookModal = ({ collection, isOpen, closeModal, oldNotebook }) => {
   const [notebook, setNotebook] = useState(
     oldNotebook ?? {
       name: "",
@@ -39,7 +39,7 @@ const NotebookModal = ({ shop, isOpen, closeModal, oldNotebook }) => {
     event.preventDefault();
     notebookStore[oldNotebook ? "updateNotebook" : "createNotebook"](
       notebook,
-      shop
+      collection
     );
     closeModal();
   };

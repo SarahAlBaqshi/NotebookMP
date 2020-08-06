@@ -4,8 +4,9 @@ import { observer } from "mobx-react";
 
 //Components
 import NotebookList from "../NotebookList/NotebookList";
+import NotebookDetail from "../NotebookList/NotebookDetail";
 import CollectionList from "../CollectionList/CollectionList";
-// import CollectionDetail from "../CollectionDetail";
+import CollectionDetail from "../CollectionList/CollectionDetail";
 
 
 //Stores
@@ -17,15 +18,15 @@ const Routes = () => {
     return (
         <div>
             <Switch>
-                {/* <Route path="/collections/:collectionSlug">
+                <Route path="/collections/:collectionSlug">
                     <CollectionDetail />
-                </Route> */}
+                </Route>
                 <Route path="/collections">
           <CollectionList />
         </Route>
-        {/* <Route path="/notebooks/:notebookSlug">
+        <Route path="/notebooks/:notebookSlug">
           <NotebookDetail />
-        </Route> */}
+        </Route>
         <Route path="/notebooks">
           <NotebookList notebooks={notebookStore.notebooks} />
         </Route>

@@ -19,17 +19,19 @@ class NotebookStore {
     return this.notebooks.find((notebook) => notebook.id === notebookID);
   };
 
-  createNotebook = async (newNotebook, shop) => {
+  createNotebook = async (newNotebook, collection) => {
     try {
       const formData = new FormData();
       for (const key in newNotebook) formData.append(key, newNotebook[key]);
       const res = await axios.post(
-        `http://localhost:8000/shops/${shop.id}/notebooks`,
+        `http://localhost:8000/collections/${collection.id}/notebooks`,
         formData
       );
       const notebook = res.data;
       this.notebooks.push(notebook);
-      shop.notebooks.push({ id: res.data.id });
+      console.log("NotebookStore -> createNotebook -> this.notebooks", this.notebooks)
+      collection.notebooks.push({ id: res.data.id });
+      console.log("NotebookStore -> createNotebook ->  collection.notebooks",  collection.notebooks)
     } catch (error) {
       console.log("notebookStore -> createNotebook -> error", error);
     }

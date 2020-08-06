@@ -9,6 +9,7 @@ import Routes from "./components/routes/index"
 // Stores
 import notebookStore from "./stores/notebookStore"
 import collectionStore from "./stores/collectionStore"
+import { observer } from "mobx-react";
 
 function App() {
   return ( <div> 
@@ -26,4 +27,4 @@ function App() {
  </div> );
 }
 
-export default App;
+export default observer(App);

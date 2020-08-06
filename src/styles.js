@@ -42,3 +42,59 @@ export const Title = styled.h1`
 margin-top: 300px;
   text-align: center;
   `;
+
+
+  export const CollectionDetailWrapper = styled.div`
+  border: ;
+  display: block;
+  margin: 50px auto 30px;
+  width: 500px;
+
+  img {
+    width: 500px;
+    height: 300px;
+    display: block;
+    margin: auto;
+  }
+
+  p {
+    vertical-align: middle;
+    text-align: center;
+    margin: 10px;
+  }
+`;
+
+export const DetailWrapper = styled.div`
+  border: 1px solid;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 500px;
+  h1 {
+    text-align: center;
+  }
+  img {
+    width: 300px;
+    height: 330px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  p {
+    vertical-align: middle;
+    text-align: justify;
+    margin: 10px;
+    &.textalign {
+      text-align: center;
+    }
+  }
+`;
+
+
+export const SearchBarStyled = styled.input`
+  padding: 0.5rem;
+  margin: 1rem auto;
+  display: block;
+  width: 350px;
+`;

@@ -1,4 +1,5 @@
 import React from "react";
+import { observer } from "mobx-react";
 
 //Styles
 import { CollectionItemImage } from "../../styles";
@@ -8,8 +9,9 @@ const CollectionItem = ({ collection }) => {
   return (
     <Link to={`/collections/${collection.slug}`}>
       <CollectionItemImage src={collection.image} alt={collection.name} />
+      <p>{collection.name}</p>
     </Link>
   );
 };
 
-export default CollectionItem;
+export default observer(CollectionItem);
