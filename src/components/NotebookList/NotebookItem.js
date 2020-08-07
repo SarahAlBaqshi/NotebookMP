@@ -14,6 +14,7 @@ const NotebookItem = ({ notebook }) => {
       </div>
       <div className="card-body">
         <p>{notebook.description}</p>
+  <p>{notebook.tags}</p>
       </div>
       {/* <UpdateButton notebook={notebook} />
           <DeleteButton notebookID={notebook.id} />{" "} */}

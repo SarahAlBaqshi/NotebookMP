@@ -88,6 +88,17 @@ const NotebookModal = ({ collection, isOpen, closeModal, oldNotebook }) => {
             value={notebook.description}
           ></textarea>
         </div>
+        <div className="form-group">
+          <label>Tag</label>
+          <input
+            class="form-control"
+            name="tag"
+            type="text"
+            onChange={handleChange}
+            className="form-control"
+            value={notebook.tags}
+          />
+        </div>
 
         <CreateButtonStyled className="btn float-right">
           {oldNotebook ? "Update" : "Create"}
